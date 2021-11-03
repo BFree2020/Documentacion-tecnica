@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Documentacion Tecnica</title>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <header>Documentacion Python</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduccion">Introduccion</a></li>
+            <li>
+                <a class="nav-link" href="#Que_deberia_saber">Que deberia saber</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Python">Python</a>
+            </li>
+            <li><a class="nav-link" href="#Invocando_al_interprete">Invocando al interprete</a></li>
+            <li><a class="nav-link" href="#Introduccion_informal">Introduccion informal</a></li>
+            <li>
+                <a class="nav-link" href="#Paso_de_argumentos">Paso de argumentos</a>
+            </li>
+            <li><a class="nav-link" href="#Modo_interactivo">Modo interactivo</a></li>
+            <li><a class="nav-link" href="#El_interprete_y_su_entorno">El interprete y su entorno</a></li>
+            <li><a class="nav-link" href="#Codificacion_del_codigo_fuente">Codificacion del codigo fuente</a></li>
+            <li><a class="nav-link" href="#Palabras_claves_como_argumentos">Palabras claves como argumentos</a></li>
+            <li>
+                <a class="nav-link" href="#La_funcion_range()">La funcion range()</a>
+            </li>
+            <li><a class="nav-link" href="#Modulos_estandar">Modulos estandar</a></li>
+            <li>
+                <a class="nav-link" href="#Sintaxis_de_definicion_de_clases">Sintaxis de definicion de clases</a>
+            </li>
+            <li><a class="nav-link" href="#Referencia">Referencia</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduccion">
+            <header>Introduccion</header>
+            <article>
+                <p>
+                    Python es un lenguaje de programación potente y fácil de aprender.
+                </p>
+
+                <p>
+                    Tiene estructuras de datos de alto nivel eficientes y un simple pero efectivo sistema de
+                    programación orientado a objetos, entre lo cual se destaca:
+                </p>
+                <ul>
+                    <li>
+                        La elegante sintaxis de Python y su tipado dinámico.
+                    </li>
+                    <li>
+                        Su naturaleza interpretada lo convierten en un lenguaje ideal para scripting y desarrollo rápido
+                        de aplicaciones en muchas áreas, para la mayoría de plataformas.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Que_deberia_saber">
+            <header>Que deberia saber</header>
+            <article>
+                <p>Para que puedas empezar a aprender Python deberias saber:</p>
+
+                <ul>
+                    <li>
+                        SQL: Desarrollo y gestión de bases de datos.
+
+
+                    </li>
+                    <li>Big Data aplicada a los negocios.</li>
+                    <li>
+                        Introducción al Desarrollo Web front end: HTML y CSS desde cero.
+                        Fundamentos de JavaScript y
+                        TypeScript desde cero.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Python">
+            <header>Python</header>
+            <article>
+                <p>
+                    Python es fácil de utilizar siendo un lenguaje de programación real ofreciendo mucha más estructura
+                    y soporte para programas grandes que la que ofrecen shell scripts o ficheros batch. Por otro lado,
+                    Python también ofrece mayor comprobación de errores que C y siendo un lenguaje de muy alto nivel
+                    tiene tipos de datos de alto nivel incorporados como listas flexibles y diccionarios. Debido a sus
+                    tipos de datos más generales, Python es aplicable a más dominios que Awk o Perl, aunque hay muchas
+                    cosas que son tan sencillas en Python como en esos lenguajes.
+                </p>
+
+                <p>
+                    Python te permite dividir tu programa en módulos que pueden reutilizarse en otros programas de
+                    Python. Tiene una gran colección de módulos estándar que puedes utilizar como la base de tus
+                    programas o como ejemplos para empezar a aprender Python. Algunos de estos módulos proporcionan
+                    cosas como entrada/salida de ficheros, llamadas a sistema, sockets e incluso interfaces a
+                    herramientas de interfaz gráfica como Tk.
+                </p>
+                <p>
+                    Python es un lenguaje interpretado, lo cual puede ahorrarte mucho tiempo durante el desarrollo ya
+                    que no es necesario compilar ni enlazar. El intérprete puede usarse interactivamente, lo que
+                    facilita experimentar con características del lenguaje, escribir programas desechables o probar
+                    funciones cuando se hace desarrollo de programas de abajo hacia arriba. Es también una calculadora
+                    de escritorio práctica.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Invocando_al_interprete">
+            <header>Invocando al interprete</header>
+            <article>
+                El interprete de Phyton es usualmente instalado como:
+                <code> /usr/local/bin/python3.10
+            </code>
+
+                En UNIX por el buscardor es posible ubicarlo escribiendo el comando python3.10
+            </article>
+        </section>
+        <section class="main-section" id="Introduccion_informal">
+            <header>Introduccion informal</header>
+            <p>
+                En los siguientes ejemplos, la entrada y la salida se distinguen por la presencia o ausencia de prompts
+                (>>> y …): para repetir el ejemplo, escribe todo después del prompt, cuando aparece; las líneas que no
+                comienzan con un prompt son emitidas desde el intérprete. Ten en cuenta que un prompt secundario solo en
+                una linea de ejemplo significa que debes escribir una línea en blanco. Esto se utiliza para finalizar un
+                comando multilínea.
+            </p>
+            <p>
+                Muchos de los ejemplos de este manual, incluso aquellos ingresados en el prompt interactivo, incluyen
+                comentarios. Los comentarios en Python comienzan con el carácter numeral, #, y se extienden hasta el
+                final visible de la línea.
+            </p>
+            <p>
+                Un comentario quizás aparezca al comienzo de la línea o seguido de espacios en blanco o código, pero no
+                dentro de una cadena de caracteres. Un carácter numeral dentro de una cadena de caracteres es sólo un
+                carácter numeral. Ya que los comentarios son para aclarar código y no son interpretados por Python,
+                pueden omitirse cuando se escriben los ejemplos.
+            </p>
+        </section>
+        <section class="main-section" id="Paso_de_argumentos">
+            <header>Paso de argumentos</header>
+            <article>
+                Cuando son conocidos por el intérprete, el nombre del script y los argumentos adicionales se convierten
+                a una lista de cadenas de texto asignada a la variable argv del módulo sys.
+                <p>
+                    Puedes acceder a esta lista haciendo, <code>import sys</code> la longitud de la lista es al menos
+                    uno
+                </p>
+                <p>
+                    Cuando no se utiliza ningún script o argumento, <code>sys.argv[0]</code> es una cadena vacía.
+                </p>
+                <p>
+                    Cuando se pasa el nombre del script con '-' <code>  sys.argv[0] vale '-'</code> (lo que significa la
+                    entrada estándar),
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Modo_interactivo">
+            <header>Modo interactivo</header>
+            <article>
+                <p>
+                    Cuando se leen los comandos desde un terminal, se dice que el intérprete está en modo interactivo.
+                </p>
+
+                <p>
+                    En este modo, espera el siguiente comando con el prompt primario, generalmente tres signos de mayor
+                    que (>>>); para las líneas de continuación, aparece el prompt secundario, por defecto tres puntos
+                    (...). El intérprete imprime un mensaje de bienvenida que indica su número de versión y un aviso de
+                    copyright antes de imprimir el primer prompt primario:
+                </p>
+                <code>$ python3.10
+      Python 3.10 (default, June 4 2019, 09:25:04)
+      [GCC 4.8.2] on linux
+      Type "help", "copyright", "credits" or "license" for more information.
+      >>></code>
+                <p>
+                    Las líneas de continuación son necesarias cuando se ingresa una construcción multilínea. Como
+                    ejemplo, echa un vistazo a la sentencia if:
+                </p>
+
+                <code>>>> the_world_is_flat = True
+      >>> if the_world_is_flat:
+      ...     print("Be careful not to fall off!")
+      ...
+      Be careful not to fall off!</code>
+            </article>
+        </section>
+        <section class="main-section" id="El_interprete_y_su_entorno">
+            <header>El interprete y su entorno</header>
+            <article>
+                <p>
+                    De forma predeterminada, los archivos fuente de Python se tratan como codificados en UTF-8.
+                </p>
+
+                <p>
+                    En esa codificación, los caracteres de la mayoría de los idiomas del mundo se pueden usar
+                    simultáneamente en literales, identificadores y comentarios, aunque la biblioteca estándar solo usa
+                    caracteres ASCII para los identificadores, una convención que debería seguir cualquier código que
+                    sea portable.Para mostrar todos estos caracteres correctamente, tu editor debe reconocer que el
+                    archivo es UTF-8, y debe usar una fuente que admita todos los caracteres del archivo.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Codificacion_del_codigo_fuente">
+            <header>Codificacion del codigo fuente</header>
+            <article>
+                <p>
+                    Para declarar una codificación que no sea la predeterminada, se debe agregar una línea de comentario
+                    especial como la primera línea del archivo. La sintaxis es la siguiente:
+                </p>
+
+                <code># -*- coding: encoding -*-</code>
+                <p>
+                    donde codificación es uno de los codecs soportados por Python.
+                </p>
+
+                <p>
+                    Es importante tener clara la sintaxis
+                </p>
+
+                <p>
+                    Por ejemplo, para declarar que se utilizará la codificación de Windows-1252, la primera línea del
+                    archivo de código fuente debe ser:
+                </p>
+
+                <code># -*- coding: cp1252 -*-</code>
+                Una excepción a la regla de primera línea es cuando el código fuente comienza con una línea UNIX
+                «shebang» line. En ese caso, la declaración de codificación debe agregarse como la segunda línea del
+                archivo. Por ejemplo:
+                <code>#!/usr/bin/env python3
+      # -*- coding: cp1252 -*-</code>
+            </article>
+        </section>
+        <section class="main-section" id="Palabras_claves_como_argumentos">
+            <header>Palabras claves como argumentos</header>
+            <article>
+                <p>Las funciones también puede ser llamadas usando argumentos de palabras clave (o argumentos nombrados)
+                    de la forma kwarg=value.</p>
+                <ul>
+                    <li>
+                        <p>Parámetros especiales</p>Por defecto, los argumentos pueden enviarse a una función Python o
+                        bien por posición o explícitamente por clave. Para legibilidad y rendimiento tiene sentido
+                        restringir como se pueden enviar los argumentos, así un desarrollador necesitará mirar solamente
+                        la definición de la función para determinar si los argumentos se deben enviar por posición, por
+                        posición o clave, o por clave con base en:
+                        <ul>
+                            <li>Argumentos posicionales o de palabras claves.</li>
+                            <li>
+                                Parámetros únicamente posicionales.
+                            </li>
+                            <li> Argumentos únicamente de palabras clave.</li>
+                            <li> Ejemplos de Funciones standard_arg, pos_only_arg, kwd_only_args</li>
+                            <li>Considere esta definición de función que contiene una colisión potencial entre los
+                                parámetros posicionales name y **kwds que incluye name como una clave:def foo(name,
+                                **kwds):
+                                return 'name' in kwds</li>
+                            <li>
+                                No hay una llamada posible que lo haga retornar True ya que la palabra clave 'name'
+                                siempre se vinculará al primer parámetro. Por ejemplo:>>> foo(1, **{'name': 2})
+                                Traceback (most recent call last):
+                                File "<stdin>", line 1, in <module>
+                                        TypeError: foo() got multiple values for argument 'name'
+                                        >>>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>El caso de uso determinará qué parámetros utilizar en una definición de función:def f(pos1,
+                        pos2, /, pos_or_kwd, *, kwd1, kwd2):</li>
+                </ul>
+                A modo de guía:
+
+                Utilice únicamente posicionales si quiere que el nombre del parámetro esté disponible para el usuario.
+                Esto es útil cuando el nombre del parámetro no tiene un significado real, si se quiere imponer el orden
+                de los parámetros cuando una función es llamada o si necesita tomar algunos parámetros posicionales y
+                palabras claves arbitrarias.
+
+                Utilice parámetros únicamente de palabras clave cuando los nombres de los parámetros tienen un
+                significado y la definición de la función será más entendible usando nombres explícitos o cuando desea
+                evitar que los usuarios dependan de la posición de los parámetros que se pasan.
+
+                En el caso de una API, use solo posicional para evitar que se rompan los cambios de la API si el nombre
+                del parámetro se modifica en el futuro.
+            </article>
+        </section>
+        <section class="main-section" id="La_funcion_range()">
+            <header>La funcion range()</header>
+            <article>
+                Si se necesita iterar sobre una secuencia de números, es apropiado utilizar la función integrada
+                range(), la cual genera progresiones aritméticas:
+
+                <code>>>> for i in range(5):
+      ...     print(i)
+      ...</code>
+                El valor final dado nunca es parte de la secuencia; range(10) genera 10 valores, los índices
+                correspondientes para los ítems de una secuencia de longitud 10.
+                <p>
+                    Es posible hacer que el rango empiece con otro número, o especificar un incremento diferente
+                    (incluso negativo; algunas veces se lo llama “paso”):
+                </p>
+                <code>>>> list(range(5, 10))
+      [5, 6, 7, 8, 9]
+      
+      >>> list(range(0, 10, 3))
+      [0, 3, 6, 9]
+      
+      >>> list(range(-10, -100, -30))
+      [-10, -40, -70]
+            </code>
+                Para iterar sobre los índices de una secuencia, puedes combinar range() y len() así:
+
+                <code>>>> a = ['Mary', 'had', 'a', 'little', 'lamb']
+      >>> for i in range(len(a)):
+      ...     print(i, a[i])
+      ...
+      0 Mary
+      1 had
+      2 a
+      3 little
+      4 lamb</code>
+                En la mayoría de los casos, sin embargo, conviene usar la función enumerate(), mira Técnicas de
+                iteración.
+
+                Algo extraño sucede si muestras un ` range`:
+                <code>>>> range(10)
+      range(0, 10)</code> De muchas maneras el objeto retornado por range() se comporta como si fuera una lista, pero
+                no lo es. Es un objeto que retorna los ítems sucesivos de la secuencia deseada cuando iteras sobre él,
+                pero realmente no construye la lista, ahorrando entonces espacio.
+
+                Decimos que tal objeto es iterable; esto es, que se puede usar en funciones y construcciones que esperan
+                algo de lo cual obtener ítems sucesivos hasta que se termine. Hemos visto que la declaración for es una
+                de esas construcciones, mientras que un ejemplo de función que toma un iterable es la función sum():
+
+                <code>>>> sum(range(4))  # 0 + 1 + 2 + 3
+      6</code>
+            </article>
+        </section>
+        <section class="main-section" id="Modulos_estandar">
+            <header>Modulos estandar</header>
+            <article>
+                Python viene con una biblioteca de módulos estándar, descrita en un documento separado, la Referencia de
+                la Biblioteca de Python (de aquí en más, «Referencia de la Biblioteca»). Algunos módulos se integran en
+                el intérprete; estos proveen acceso a operaciones que no son parte del núcleo del lenguaje pero que sin
+                embargo están integrados, tanto por eficiencia como para proveer acceso a primitivas del sistema
+                operativo, como llamadas al sistema. El conjunto de tales módulos es una opción de configuración el cual
+                también depende de la plataforma subyacente. Por ejemplo, el módulo winreg sólo se provee en sistemas
+                Windows. Un módulo en particular merece algo de atención: sys, el que está integrado en todos los
+                intérpretes de Python. Las variables sys.ps1 y sys.ps2 definen las cadenas usadas como cursores
+                primarios y secundarios:
+
+                <code>>>> import sys
+      >>> sys.ps1
+      '>>> '
+      >>> sys.ps2
+      '... '
+      >>> sys.ps1 = 'C> '
+      C> print('Yuck!')
+      Yuck!
+      C></code> Estas dos variables están solamente definidas si el intérprete está en modo interactivo.
+
+                <p>
+                    La variable sys.path es una lista de cadenas que determinan el camino de búsqueda del intérprete
+                    para los módulos.
+                </p>
+
+                <p>
+                    Se inicializa por omisión a un camino tomado de la variable de entorno PYTHONPATH, o a un valor
+                    predefinido en el intérprete si PYTHONPATH no está configurada. Lo puedes modificar usando las
+                    operaciones estándar de listas:
+                </p>
+
+                Ejemplo:
+
+                <p>Tener clara la sintaxis:</p>
+
+                <code>>>> import sys
+      >>> sys.path.append('/ufs/guido/lib/python')</code>
+                <p>
+                    El camino de búsqueda de los módulos
+                </p>
+
+                <ul>
+                    <li>El directorio que contiene el script de entrada (o el directorio actual cuando no se especifica
+                        archivo).</li>
+                    <li>PYTHONPATH (una lista de nombres de directorios, con la misma sintaxis que la variable de la
+                        terminal PATH).</li>
+                    <li>After the third pass: n = 3 and x = 6</li>
+                </ul>
+                <p>
+                    De acuerdo a lo anterior, cuando se importa un módulo llamado spam, el intérprete busca primero por
+                    un módulo con ese nombre que esté integrado en el intérprete. Si no lo encuentra, entonces busca un
+                    archivo llamado spam.py en una lista de directorios especificada por la variable sys.path. sys.path
+                    se inicializa con las ubicaciones anteriores.
+
+
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Sintaxis_de_definicion_de_clases">
+            <header>Sintaxis de definicion de clases</header>
+            <article>
+                Las definiciones de clases, al igual que las definiciones de funciones (instrucciones def) deben
+                ejecutarse antes de que tengan efecto alguno. (Es concebible poner una definición de clase dentro de una
+                rama de un if, o dentro de una función.).En la práctica, las declaraciones dentro de una clase son
+                definiciones de funciones, pero otras declaraciones son permitidas, y a veces resultan útiles; veremos
+                esto más adelante
+
+                <ul>
+                    <li>Las definiciones de funciones dentro de una clase normalmente tienen una lista de argumentos
+                        peculiar, dictada por las convenciones de invocación de métodos; a esto también lo veremos más
+                        adelante.</li>
+                    <li>
+                        Cuando se ingresa una definición de clase, se crea un nuevo espacio de nombres, el cual se usa
+                        como ámbito local; por lo tanto, todas las asignaciones a variables locales van a este nuevo
+                        espacio de nombres. En particular, las definiciones de funciones asocian el nombre de las
+                        funciones nuevas allí.
+                    </li>
+                    <li>
+                        Cuando una definición de clase se finaliza normalmente se crea un objeto clase. Básicamente,
+                        este objeto envuelve los contenidos del espacio de nombres creado por la definición de la clase;
+                        aprenderemos más acerca de los objetos clase en la sección siguiente.
+                    </li>
+                </ul>
+                <p>
+                    La forma más sencilla de definición de una clase se ve así:
+                </p>
+
+                <code>class ClassName:
+          <statement-1>
+          .
+          .
+          .
+          <statement-N></code>
+                <p>
+                    Los objetos clase soportan dos tipos de operaciones: hacer referencia a atributos e instanciación.
+
+                    Para hacer referencia a atributos se usa la sintaxis estándar de todas las referencias a atributos
+                    en Python: objeto.nombre. Los nombres de atributo válidos son todos los nombres que estaban en el
+                    espacio de nombres de la clase cuando ésta se creó. Por lo tanto, si la definición de la clase es
+                    así:
+                </p>
+                <code>class MyClass:
+          """A simple example class"""
+          i = 12345
+      
+          def f(self):
+              return 'hello world'</code>
+                <p>
+                    ...entonces MiClase.i y MiClase.f son referencias de atributos válidas, que retornan un entero y un
+                    objeto función respectivamente. Los atributos de clase también pueden ser asignados, o sea que podés
+                    cambiar el valor de MiClase.i mediante asignación. __doc__ también es un atributo válido, que
+                    retorna la documentación asociada a la clase: "Simple clase de ejemplo".
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Referencia">
+            <header>Referencia</header>
+            <article>
+                <ul>
+                    <li>
+                        La informacion de esta pagina ha sido tomada de
+                        <a href="https://docs.python.org/es/3/contents.html" target="_blank">MDN</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
